@@ -1,0 +1,377 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jul 28, 2025, 3:26:31 PM
+    Author     : ahadu
+*/
+
+.white-bg{
+    -fx-background-color: #fff;
+}
+
+.radius{
+    -fx-background-radius: 6px;
+}
+
+.textfield-1{
+    -fx-border-color: #000;
+    -fx-border-width: .3px;
+    -fx-font-family: Tahoma;
+}
+.textfield-1:focused{
+    -fx-border-color: linear-gradient(to bottom right, #188ba7, #306090);
+    -fx-border-width: 1px;
+}
+
+.textfield-2{
+    -fx-border-color: #000;
+    -fx-border-width: .3px;
+    -fx-font-family: Tahoma;
+}
+.textfield-2:focused{
+    -fx-border-color: linear-gradient(to bottom right, #a413a1, #64308e);
+    -fx-border-width: 1px;
+}
+
+.textfield-3{
+    -fx-border-color: #000;
+    -fx-border-width: .3px;
+    -fx-font-family: Tahoma;
+}
+.textfield-3:focused{
+    -fx-border-color: linear-gradient(to bottom right, #a31336, #861d2a);
+    -fx-border-width: 1px;
+}
+
+.btn-1{
+    -fx-background-color: linear-gradient(to bottom right, #188ba7, #306090);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+.btn-1:hover{
+    -fx-background-color: linear-gradient(to bottom right, #11a7c9, #2765a4);
+}
+
+.btn-2{
+    -fx-background-color: linear-gradient(to bottom right, #a413a1, #64308e);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+.btn-2:hover{
+    -fx-background-color: linear-gradient(to bottom right, #c512c5, #67289d);
+}
+
+.btn-3{
+    -fx-background-color: linear-gradient(to bottom right, #a31336, #861d2a);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+.btn-3:hover{
+    -fx-background-color: linear-gradient(to bottom right, #bf0d3c, #9d1022);
+}
+/* Additional CSS styles for the main dashboard */
+/* Add these to your existing PageDesign.css file */
+
+/* Header styles */
+.header-bg {
+    -fx-background-color: linear-gradient(to right, #2C3E50, #34495E);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+/* Sidebar styles */
+.sidebar-bg {
+    -fx-background-color: linear-gradient(to bottom, #34495E, #2C3E50);
+    -fx-border-color: #1A252F;
+    -fx-border-width: 0 1 0 0;
+}
+
+.sidebar-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+.sidebar-btn:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-btn:pressed {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Input section styles */
+.input-section {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 0 0 2 0;
+    -fx-padding: 10;
+}
+
+/* Text area styles */
+.textarea-1 {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D3D3D3;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font-size: 12px;
+}
+
+.textarea-1:focused {
+    -fx-border-color: #3498DB;
+    -fx-border-width: 2;
+}
+
+/* Button styles */
+.btn-secondary {
+    -fx-background-color: #95A5A6;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #7F8C8D;
+}
+
+.btn-update {
+    -fx-background-color: #F39C12;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.btn-update:hover {
+    -fx-background-color: #E67E22;
+}
+
+.btn-edit {
+    -fx-background-color: #3498DB;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.btn-edit:hover {
+    -fx-background-color: #2980B9;
+}
+
+.btn-delete {
+    -fx-background-color: #E74C3C;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.btn-delete:hover {
+    -fx-background-color: #C0392B;
+}
+
+.btn-complete {
+    -fx-background-color: #27AE60;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.btn-complete:hover {
+    -fx-background-color: #229954;
+}
+
+.btn-pending {
+    -fx-background-color: #F39C12;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.btn-pending:hover {
+    -fx-background-color: #E67E22;
+}
+
+.logout-btn {
+    -fx-background-color: #E74C3C;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 15;
+    -fx-cursor: hand;
+}
+
+.logout-btn:hover {
+    -fx-background-color: #C0392B;
+}
+
+/* Task list styles */
+.task-list {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.task-list .list-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: #F0F0F0;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 8;
+}
+
+.task-list .list-cell:selected {
+    -fx-background-color: #3498DB;
+    -fx-text-fill: white;
+}
+
+.task-list .list-cell:hover {
+    -fx-background-color: #EBF5FF;
+}
+
+/* ComboBox and TextField enhancements */
+.combo-box-base {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D3D3D3;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.combo-box-base:focused {
+    -fx-border-color: #3498DB;
+    -fx-border-width: 2;
+}
+
+/* Date picker styles */
+.date-picker {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D3D3D3;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.date-picker:focused {
+    -fx-border-color: #3498DB;
+    -fx-border-width: 2;
+}
+
+/* MenuButton styles */
+.menu-button {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D3D3D3;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.menu-button:hover {
+    -fx-background-color: #F8F9FA;
+}
+
+/* Checkbox styles */
+.check-box {
+    -fx-cursor: hand;
+}
+
+.check-box .box {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D3D3D3;
+    -fx-border-width: 2;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #27AE60;
+}
+
+.check-box:selected .box {
+    -fx-border-color: #27AE60;
+}
+
+/* Separator styles */
+.separator .line {
+    -fx-border-color: rgba(255, 255, 255, 0.3);
+    -fx-border-width: 1 0 0 0;
+}
+
+/* Scroll bar styles */
+.scroll-bar:vertical {
+    -fx-background-color: #F8F9FA;
+    -fx-background-radius: 5;
+}
+
+.scroll-bar:vertical .track {
+    -fx-background-color: #F8F9FA;
+    -fx-background-radius: 5;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #BDC3C7;
+    -fx-background-radius: 5;
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #95A5A6;
+}
+
+/* Priority badge styles */
+.priority-high {
+    -fx-background-color: #E74C3C;
+    -fx-text-fill: white;
+    -fx-padding: 2 8 2 8;
+    -fx-background-radius: 10;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.priority-medium {
+    -fx-background-color: #F39C12;
+    -fx-text-fill: white;
+    -fx-padding: 2 8 2 8;
+    -fx-background-radius: 10;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.priority-low {
+    -fx-background-color: #27AE60;
+    -fx-text-fill: white;
+    -fx-padding: 2 8 2 8;
+    -fx-background-radius: 10;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+/* Animation effects */
+.fade-in {
+    -fx-opacity: 0;
+}
+
+.fade-in:hover {
+    -fx-opacity: 1;
+}
