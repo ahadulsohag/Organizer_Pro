@@ -92,7 +92,7 @@ Before running this application, make sure you have the following installed:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/organizer-pro.git
+git clone https://github.com/ahadulsohag/organizer-pro.git
 cd organizer-pro
 ```
 
@@ -324,9 +324,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**[Your Name]**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+ Ahadul Sohag
+- GitHub: [@yourusername](https://github.com/ahadulsohag)
+- Email: ahadulsohag@gmail.com
 
 ## 🙏 Acknowledgments
 
