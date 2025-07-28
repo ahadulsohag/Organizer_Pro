@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main_dashboard" prefHeight="700.0" prefWidth="900.0" styleClass="white-bg" stylesheets="@../../Design/PageDesign.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="organizer.pro.MainDashboardController">
+   <children>
+      <!-- Header Section -->
+      <AnchorPane fx:id="header_pane" layoutX="0.0" layoutY="0.0" prefHeight="80.0" prefWidth="900.0" styleClass="header-bg" stylesheets="@../../Design/PageDesign.css">
+         <children>
+            <Label layoutX="30.0" layoutY="25.0" text="Organizer Pro - Dashboard" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="welcome_user" layoutX="30.0" layoutY="50.0" text="Welcome, User!" textFill="WHITE">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="logout_btn" layoutX="800.0" layoutY="25.0" mnemonicParsing="false" onAction="#logoutUser" prefHeight="30.0" prefWidth="80.0" styleClass="logout-btn" stylesheets="@../../Design/PageDesign.css" text="Logout" />
+         </children>
+      </AnchorPane>
+
+      <!-- Sidebar -->
+      <AnchorPane fx:id="sidebar_pane" layoutX="0.0" layoutY="80.0" prefHeight="620.0" prefWidth="200.0" styleClass="sidebar-bg" stylesheets="@../../Design/PageDesign.css">
+         <children>
+            <VBox layoutX="10.0" layoutY="20.0" prefHeight="580.0" prefWidth="180.0" spacing="15.0">
+               <children>
+                  <Button fx:id="all_tasks_btn" mnemonicParsing="false" onAction="#showAllTasks" prefHeight="40.0" prefWidth="180.0" styleClass="sidebar-btn" text="All Tasks" />
+                  <Button fx:id="pending_tasks_btn" mnemonicParsing="false" onAction="#showPendingTasks" prefHeight="40.0" prefWidth="180.0" styleClass="sidebar-btn" text="Pending Tasks" />
+                  <Button fx:id="completed_tasks_btn" mnemonicParsing="false" onAction="#showCompletedTasks" prefHeight="40.0" prefWidth="180.0" styleClass="sidebar-btn" text="Completed Tasks" />
+                  <Button fx:id="overdue_tasks_btn" mnemonicParsing="false" onAction="#showOverdueTasks" prefHeight="40.0" prefWidth="180.0" styleClass="sidebar-btn" text="Overdue Tasks" />
+                  <Separator prefWidth="180.0" />
+                  <Button fx:id="high_priority_btn" mnemonicParsing="false" onAction="#showHighPriority" prefHeight="40.0" prefWidth="180.0" styleClass="sidebar-btn" text="High Priority" />
+                  <Button fx:id="medium_priority_btn" mnemonicParsing="false" onAction="#showMediumPriority" prefHeight="40.0" prefWidth="180.0" styleClass="sidebar-btn" text="Medium Priority" />
+                  <Button fx:id="low_priority_btn" mnemonicParsing="false" onAction="#showLowPriority" prefHeight="40.0" prefWidth="180.0" styleClass="sidebar-btn" text="Low Priority" />
+                  <Separator prefWidth="180.0" />
+                  <Label text="Statistics" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="total_tasks_label" text="Total Tasks: 0" textFill="WHITE" />
+                  <Label fx:id="completed_tasks_label" text="Completed: 0" textFill="WHITE" />
+                  <Label fx:id="pending_tasks_label" text="Pending: 0" textFill="WHITE" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+
+      <!-- Main Content Area -->
+      <AnchorPane fx:id="content_pane" layoutX="200.0" layoutY="80.0" prefHeight="620.0" prefWidth="700.0">
+         <children>
+            <!-- Task Input Section -->
+            <AnchorPane fx:id="task_input_pane" layoutX="0.0" layoutY="0.0" prefHeight="220.0" prefWidth="700.0" styleClass="input-section" stylesheets="@../../Design/PageDesign.css">
+               <children>
+                  <Label layoutX="20.0" layoutY="15.0" text="Add New Task">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  
+                  <TextField fx:id="task_title" layoutX="20.0" layoutY="45.0" prefHeight="35.0" prefWidth="300.0" promptText="Enter task title" styleClass="textfield-1" stylesheets="@../../Design/PageDesign.css" />
+                  
+                  <TextArea fx:id="task_description" layoutX="20.0" layoutY="90.0" prefHeight="80.0" prefWidth="300.0" promptText="Enter task description (optional)" styleClass="textarea-1" stylesheets="@../../Design/PageDesign.css" wrapText="true" />
+                  
+                  <VBox layoutX="350.0" layoutY="45.0" spacing="10.0">
+                     <children>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label text="Priority:" />
+                              <ComboBox fx:id="task_priority" prefWidth="120.0" promptText="Select Priority" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label text="Category:" />
+                              <ComboBox fx:id="task_category" prefWidth="120.0" promptText="Select Category" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label text="Due Date:" />
+                              <DatePicker fx:id="task_due_date" prefWidth="120.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  
+                  <HBox layoutX="20.0" layoutY="180.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="add_task_btn" mnemonicParsing="false" onAction="#addTask" prefHeight="35.0" prefWidth="100.0" styleClass="btn-2" text="Add Task" />
+                        <Button fx:id="clear_form_btn" mnemonicParsing="false" onAction="#clearForm" prefHeight="35.0" prefWidth="100.0" styleClass="btn-secondary" text="Clear" />
+                        <Button fx:id="update_task_btn" mnemonicParsing="false" onAction="#updateTask" prefHeight="35.0" prefWidth="100.0" styleClass="btn-update" text="Update Task" visible="false" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+
+            <!-- Task List Section -->
+            <AnchorPane fx:id="task_list_pane" layoutX="0.0" layoutY="230.0" prefHeight="390.0" prefWidth="700.0">
+               <children>
+                  <!-- Task List Header -->
+                  <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="10.0" spacing="15.0">
+                     <children>
+                        <Label text="My Tasks">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="filter_combo" onAction="#filterTasks" prefWidth="120.0" promptText="Filter by" />
+                        <TextField fx:id="search_field" onKeyReleased="#searchTasks" prefHeight="30.0" prefWidth="150.0" promptText="Search tasks..." styleClass="textfield-1" />
+                        <MenuButton fx:id="sort_menu" text="Sort by">
+                           <items>
+                              <MenuItem fx:id="sort_title" onAction="#sortByTitle" text="Title" />
+                              <MenuItem fx:id="sort_priority" onAction="#sortByPriority" text="Priority" />
+                              <MenuItem fx:id="sort_date" onAction="#sortByDate" text="Due Date" />
+                              <MenuItem fx:id="sort_created" onAction="#sortByCreated" text="Date Created" />
+                           </items>
+                        </MenuButton>
+                     </children>
+                  </HBox>
+
+                  <!-- Task ListView -->
+                  <ListView fx:id="task_list_view" layoutX="20.0" layoutY="50.0" onMouseClicked="#selectTask" prefHeight="280.0" prefWidth="660.0" styleClass="task-list" stylesheets="@../../Design/PageDesign.css" />
+
+                  <!-- Task Actions -->
+                  <HBox layoutX="20.0" layoutY="340.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="edit_task_btn" mnemonicParsing="false" onAction="#editSelectedTask" prefHeight="35.0" prefWidth="100.0" styleClass="btn-edit" text="Edit Task" />
+                        <Button fx:id="delete_task_btn" mnemonicParsing="false" onAction="#deleteSelectedTask" prefHeight="35.0" prefWidth="100.0" styleClass="btn-delete" text="Delete Task" />
+                        <Button fx:id="mark_complete_btn" mnemonicParsing="false" onAction="#markTaskComplete" prefHeight="35.0" prefWidth="120.0" styleClass="btn-complete" text="Mark Complete" />
+                        <Button fx:id="mark_pending_btn" mnemonicParsing="false" onAction="#markTaskPending" prefHeight="35.0" prefWidth="120.0" styleClass="btn-pending" text="Mark Pending" />
+                        <Button fx:id="duplicate_task_btn" mnemonicParsing="false" onAction="#duplicateTask" prefHeight="35.0" prefWidth="100.0" styleClass="btn-secondary" text="Duplicate" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
