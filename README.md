@@ -324,8 +324,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
- Ahadul Sohag
-- GitHub: [@yourusername](https://github.com/ahadulsohag)
+- GitHub: [@ahadulsohag](https://github.com/ahadulsohag)
 - Email: ahadulsohag@gmail.com
 
 ## 🙏 Acknowledgments
